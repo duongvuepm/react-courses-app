@@ -1,3 +1,3 @@
-export const Button = ({ label }) => {
-	return <button>{label}</button>;
+export const Button = ({ label, isUpper = true }) => {
+	return <button>{isUpper ? label.toUpperCase() : label}</button>;
 };
