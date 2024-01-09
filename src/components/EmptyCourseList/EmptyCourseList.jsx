@@ -1,12 +1,6 @@
 import { Courses } from '../Courses/Courses';
 import { faker } from '@faker-js/faker';
 
-// fetch courses here
-
-const loremConfig = {
-	count: 10,
-};
-
 const generateAuthors = (count) => {
 	const authors = [];
 	for (let i = 0; i < count; i++) {
