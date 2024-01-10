@@ -1,4 +1,5 @@
 import { Button } from '../../../../common/Button/Button';
+import { useNavigate, useOutletContext } from 'react-router-dom';
 
 const leftStyle = {
 	width: '60%',
@@ -8,6 +9,13 @@ const rightStyle = {
 };
 
 export const CourseCard = ({ course }) => {
+	const navigate = useNavigate();
+	const [, setSelectedCourse] = useOutletContext();
+	let showCourseHandler = (event) => {
+		setSelectedCourse(course);
+		navigate('/course-info');
+	};
+
 	return (
 		<div>
 			<div id={'courseHeader'}>
@@ -28,7 +36,7 @@ export const CourseCard = ({ course }) => {
 						<strong>Created: </strong> {course.created}
 					</p>
 					<div>
-						<Button label={'Show course'} />
+						<Button label={'Show course'} handler={showCourseHandler} />
 						<Button label={'Delete'} />
 						<Button label={'Edit'} />
 					</div>

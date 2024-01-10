@@ -11,11 +11,17 @@ const itemStyle = {
 	margin: 5,
 };
 
-export const SearchBar = () => {
+export const SearchBar = ({ inputHandler = () => {} }) => {
 	return (
 		<div style={searchBarStyle}>
 			<div>
-				<input placeholder='Input text' style={itemStyle} />
+				<input
+					placeholder='Input text'
+					style={itemStyle}
+					onKeyUp={(e) => {
+						inputHandler(e.target.value);
+					}}
+				/>
 				<Button label={'Search'} style={itemStyle} />
 			</div>
 			<Button label={'Add new'} />
