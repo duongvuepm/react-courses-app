@@ -1,10 +1,14 @@
-import { Button } from '../../../../common/Button/Button';
+import { MyButton } from '../../../../common/Button/MyButton';
 
 const searchBarStyle = {
 	display: 'flex',
 	justifyContent: 'space-between',
 	alignItems: 'center',
 	padding: 5,
+};
+
+const groupStyle = {
+	display: 'flex',
 };
 
 const itemStyle = {
@@ -14,7 +18,7 @@ const itemStyle = {
 export const SearchBar = ({ inputHandler = () => {} }) => {
 	return (
 		<div style={searchBarStyle}>
-			<div>
+			<div style={groupStyle}>
 				<input
 					placeholder='Input text'
 					style={itemStyle}
@@ -22,9 +26,9 @@ export const SearchBar = ({ inputHandler = () => {} }) => {
 						inputHandler(e.target.value);
 					}}
 				/>
-				<Button label={'Search'} style={itemStyle} />
+				<MyButton label={'Search'} style={itemStyle} />
 			</div>
-			<Button label={'Add new'} />
+			<MyButton label={'Add new'} />
 		</div>
 	);
 };

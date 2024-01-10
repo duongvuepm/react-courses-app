@@ -1,4 +1,4 @@
-import { Button } from '../../common/Button/Button';
+import { MyButton } from '../../common/Button/MyButton';
 import { Logo } from './components/Logo/Logo';
 
 const headerStyle = {
@@ -7,6 +7,7 @@ const headerStyle = {
 	alignItems: 'center',
 	padding: 10,
 	backgroundColor: '#f5f5f5',
+	height: 50,
 };
 
 export const Header = () => {
@@ -17,7 +18,7 @@ export const Header = () => {
 					'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Udemy_logo.svg/2560px-Udemy_logo.svg.png'
 				}
 			/>
-			<Button label={'Logout'} />
+			<MyButton label={'Logout'} />
 		</div>
 	);
 };

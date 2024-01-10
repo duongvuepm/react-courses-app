@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { bodyRouter } from './components/Body/Body';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const router = createBrowserRouter([
 	{

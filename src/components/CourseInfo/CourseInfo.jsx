@@ -1,4 +1,4 @@
-import { Button } from '../../common/Button/Button';
+import { MyButton } from '../../common/Button/MyButton';
 import { useNavigate, useOutletContext } from 'react-router-dom';
 
 export const CourseInfo = ({ course }) => {
@@ -10,7 +10,7 @@ export const CourseInfo = ({ course }) => {
 
 	return (
 		<div>
-			<Button label={'Back'} handler={backHandler} />
+			<MyButton label={'Back'} handler={backHandler} />
 			<h1>{selectedCourse.name}</h1>
 			<p>{selectedCourse.description}</p>
 		</div>
